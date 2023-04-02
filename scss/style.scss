@@ -16,9 +16,11 @@ form {
   width: 70%;
   margin: auto;
   padding: 5rem 0;
+  align-items: center;
 }
 
 label {
+  width: 50%;
   font-size: 18px;
   font-weight: 600;
   display: inline-flex;
@@ -27,9 +29,47 @@ label {
 }
 
 input {
-  max-width: 50%;
+  margin-top: 0.3em;
+  border: 1px solid #000000;
+  transition: box-shadow 0.15s ease-in;
+
+  &:hover {
+    box-shadow: 0 0 8px #91ba50;
+  }
+
+  &:focus {
+    box-shadow: 0 0 8px #607e2f;
+  }
+}
+
+button[type="submit"],
+input {
   padding: 8px;
   font-size: 16px;
   border-radius: 4px;
-  margin-top: 0.3em;
+}
+
+button[type="submit"] {
+  text-transform: uppercase;
+  width: 30%;
+  align-self: center;
+  color: #91ba50;
+  border: 1px solid #91ba50;
+  background-color: #ffffff;
+  transition: all 0.12s ease-in;
+
+  &:hover {
+    color: #ffffff;
+    background-color: #91ba50;
+  }
+}
+
+@media (max-width: 767px) {
+  label {
+    width: 100%;
+  }
+
+  button[type="submit"] {
+    width: 50%;
+  }
 }
