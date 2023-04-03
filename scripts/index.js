@@ -41,6 +41,7 @@ async function handleSubmit(e) {
   }
 }
 form.addEventListener("submit", handleSubmit);
+form.addEventListener("change", handleChange);
 
 function validateInputs(form) {
   for (let key in form.elements) {
